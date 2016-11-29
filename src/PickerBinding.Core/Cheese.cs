@@ -14,14 +14,14 @@ namespace PickerBinding.Core
         public CheeseTypes Type { get; set; }
         public int Id { get; set; }
 
-        static List<Cheese> _allCheeses;
-        public static List<Cheese> All
+        static ObservableCollection<Cheese> _allCheeses;
+        public static ObservableCollection<Cheese> All
         {
             get
             {
                 if (_allCheeses == null)
                 {
-                    _allCheeses = new List<Cheese>
+                    _allCheeses = new ObservableCollection<Cheese>
                     {
                         new Cheese { CheeseName="Little Boy Blue", Dairy="Hooks", Id=1, Type=CheeseTypes.Blue },
                         new Cheese { CheeseName="10 year", Dairy="Hooks",Id=2, Type=CheeseTypes.Cheddar },

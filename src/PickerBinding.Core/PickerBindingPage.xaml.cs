@@ -19,15 +19,12 @@ namespace PickerBinding.Core
 
             changeButton.Clicked += (sender, e) =>
             {
-				//thePicker.SelectedItem = _vm.AllPossibleCheeses[1];
+				// Just hard code the cheese to set - see it change everywhere
 				_vm.SelectedCheese = Cheese.All[1];
             };
 
             addButton.Clicked += (sender, e) =>
             {
-				//_vm.AllPossibleCheeses.Add(new Cheese { CheeseName = "new" });
-				var c = _vm.SelectedCheese;
-                //thePicker.ItemsSource.Insert(1, new Cheese { CheeseName = "asdf" });
                 Cheese.All.Add(new Cheese { CheeseName = "New" });
             };
         }
