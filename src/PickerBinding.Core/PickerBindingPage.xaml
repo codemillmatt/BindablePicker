@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PickerBinding.Core;assembly=PickerBinding.Core"
+             x:Class="PickerBinding.Core.PickerBindingPage">
+  <StackLayout Orientation="Vertical">
+    <Label Text="What's your favorite cheese?" />
+   <!-- <Picker ItemsSource="{x:Static local:Cheese.All}" ItemDisplayBinding="{Binding CheeseName}" SelectedItem="{Binding SelectedCheese}" x:Name="thePicker" />-->
+
+<Picker ItemsSource="{x:Static local:Cheese.All}" ItemDisplayBinding="{Binding CheeseName}" SelectedItem="{Binding SelectedCheese, Mode=TwoWay}" x:Name="thePicker" />
+
+    <Button Text="Change Favorite With Button"  x:Name="changeButton" />
+    <Button Text="Add another cheese" x:Name="addButton" />
+  </StackLayout>
+</ContentPage>
